@@ -14,7 +14,7 @@ export default async function Home() {
       <SiteContainer>
         <section className="py-20 sm:py-28 md:py-32">
           <p className="mb-6 text-sm font-medium text-muted-foreground">
-            Desenvolvedor & filómato.
+            Desenvolvedor & filomático.
           </p>
 
           <h1 className="max-w-3xl font-heading text-5xl leading-[1.02] font-medium tracking-tight sm:text-6xl md:text-7xl">

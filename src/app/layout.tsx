@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 
 import { Header } from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 const newsreader = Newsreader({
   variable:'--font-heading',
@@ -29,15 +30,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="pt-BR"
       className={cn("h-full", "antialiased", geistSans.variable, newsreader.variable)}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen bg-background font-sans text-foreground">
-        <Header />
+      <body className="min-h-screen bg-background text-foreground">
+        <ThemeProvider>
+          <div className="flex min-h-screen flex-col">
+            <Header />
 
-        <div className="flex-1">
-          {children}
-        </div>
+            <div className="flex-1">
+              {children}
+            </div>
 
-        <Footer />
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

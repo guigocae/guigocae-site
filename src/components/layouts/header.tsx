@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { MobileMenu } from "../ui/mobile-menu";
 import { SiteContainer } from "./site-container";
+import { ThemeToggle } from "../ui/theme-toggle";
 
 const navigation = [
   {
@@ -25,22 +26,27 @@ export function Header() {
           guigocae.
         </Link>
 
-        <nav
-          className="hidden items-center gap-8 md:flex"
-          aria-label="Navegação principal"
-        >
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="flex items-center gap-2">
+          <nav
+            className="hidden items-center gap-8 md:flex"
+            aria-label="Navegação principal"
+          >
+            {navigation.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
 
-        <MobileMenu />
+          <ThemeToggle />
+          
+          <MobileMenu />
+        </div>
+
       </SiteContainer>
     </header>
   )
