@@ -28,6 +28,25 @@ export const metadata: Metadata = {
 
   description: siteConfig.description,
 
+  icons: {
+    icon: [
+      {
+        url: "/favicon-light.svg",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon-dark.svg",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
+
+  alternates: {
+    types: {
+      "application/rss+xml": "/rss.xml",
+    },
+  },
+
   openGraph: {
     type: "website",
     locale: "pt_BR",
