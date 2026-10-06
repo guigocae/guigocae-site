@@ -28,7 +28,7 @@ export default function SobrePage() {
             </p>
 
             <p>
-              Criei este site como um lugar para registrar ideias, projetos pessoais, coisas que aprendo programando, livros, jogos e qualquer outro assunto que eu achar interessante. A todo momento eu busco aprender sobre algo que eu tenho curiosidade, por isso eu deixei um adjetivo ali no slogan da página inicial: "filomático", uma palavra nova que aprendi enquanto desenvolvia este site, e que eu acredito que combina com o contexto.
+              Criei este site como um lugar para registrar ideias, projetos pessoais, coisas que aprendo programando, livros, jogos e qualquer outro assunto que eu achar interessante. A todo momento eu busco aprender sobre algo que eu tenho curiosidade, por isso eu deixei um adjetivo ali no slogan da página inicial: "filomático", uma palavra nova que aprendi enquanto desenvolvia este site, e que eu acredito que combina comigo.
             </p>
 
             <p>

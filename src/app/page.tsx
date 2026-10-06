@@ -13,10 +13,10 @@ export default async function Home() {
     <main>
       <SiteContainer>
         <section className="py-20 sm:py-28 md:py-32">
-          <div className="mb-6 h-1 w-10 rounded-full bg-primary" />
+          <div className="mb-7 h-1 w-10 rounded-full bg-primary" />
 
-          <p className="mb-6 text-sm font-medium text-muted-foreground">
-            Desenvolvedor & filomático.
+          <p className="mb-5 text-sm font-medium text-muted-foreground">
+            Desenvolvedor, leitor & filomático.
           </p>
 
           <h1 className="max-w-3xl font-heading text-5xl leading-[1.02] font-medium tracking-tight sm:text-6xl md:text-7xl">
@@ -24,7 +24,7 @@ export default async function Home() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-            Escrevo sobre qualquer coisa interessante que vier na minha cabeça, e que eu esteja a fim de compartilhar.
+            Aqui é onde eu escrevo sobre qualquer coisa interessante que vier na minha cabeça, e que eu esteja a fim de compartilhar.
           </p>
         </section>
 
