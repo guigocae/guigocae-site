@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Meu blog pessoal para escrever sobre programação, projetos, livros, jogos e outras coisas que eu achar interessantes.
 
-## Getting Started
+[guigocae.com.br](https://guigocae.com.br)
 
-First, run the development server:
+## Sobre o projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+O Guigocae é um blog pessoal construído com Next.js e MDX.
+
+A ideia foi manter a arquitetura simples: os posts são arquivos `.mdx` versionados junto com o próprio projeto, sem CMS, banco de dados ou API para gerenciamento de conteúdo.
+
+Cada arquivo MDX exporta seus próprios metadados e é transformado em uma página estática pelo Next.js durante o build.
+
+## Stack
+
+- [Next.js](https://nextjs.org/) — App Router
+- [React](https://react.dev/)
+- TypeScript
+- Tailwind CSS
+- [shadcn/ui](https://ui.shadcn.com/)
+- Base UI
+- MDX
+- next-themes
+- Lucide
+- Vercel
+
+## Posts com MDX
+
+Os posts ficam em:
+
+```text
+src/content/posts/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Cada arquivo representa um artigo:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+meu-primeiro-post.mdx
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O nome do arquivo também é usado como slug:
 
-## Learn More
+```text
+/blog/meu-primeiro-post
+```
 
-To learn more about Next.js, take a look at the following resources:
+Um post possui metadados exportados diretamente pelo MDX:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```mdx
+export const metadata = {
+  title: "Bem-vindos ao meu site",
+  description: "Meu primeiro texto no blog.",
+  date: "2026-10-06",
+  category: "Pessoal",
+}
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Conteúdo do artigo começa aqui.
 
-## Deploy on Vercel
+## Um subtítulo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+E continua normalmente usando Markdown.
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Durante o build, o Next.js compila o MDX para componentes React.
+
+O módulo resultante fornece tanto os exports do arquivo:
+
+```ts
+post.metadata
+```
+
+quanto o conteúdo compilado:
+
+```ts
+post.default
+```
+
+O conteúdo pode então ser renderizado normalmente:
+
+```tsx
+const Content = post.default
+
+return <Content />
+```
+
+## SEO
+
+O projeto também gera automaticamente:
+
+- metadata por artigo
+- canonical URLs
+- Open Graph
+- imagens Open Graph por post
+- Twitter Cards
+- `sitemap.xml`
+- `robots.txt`
+- feed RSS
+
+O feed está disponível em:
+
+```text
+/rss.xml
+```
+
+Criado por [Guilherme Gomes](https://guigocae.com.br).
