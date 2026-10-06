@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { MobileMenu } from "./mobile-menu";
+import { MobileMenu } from "../ui/mobile-menu";
 import { SiteContainer } from "./site-container";
 
 const navigation = [
