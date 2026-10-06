@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 
 import { Header } from "@/components/layouts/header";
+import { Footer } from "@/components/layouts/footer";
 
 const newsreader = Newsreader({
   variable:'--font-heading',
@@ -31,8 +32,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-screen bg-background font-sans text-foreground">
         <Header />
-        
-        {children}
+
+        <div className="flex-1">
+          {children}
+        </div>
+
+        <Footer />
       </body>
     </html>
   );

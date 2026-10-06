@@ -4,34 +4,11 @@ import { ArrowRight } from "lucide-react";
 import { PostItem } from "@/components/ui/post-item";
 import { SiteContainer } from "@/components/layouts/site-container";
 import { Separator } from "@/components/ui/separator";
+import { formatPostDate, getAllPosts } from "@/lib/posts";
 
-const posts = [
-  {
-    title: "Por que resolvi criar meu próprio blog",
-    description: "Um espaço para registrar ideias, aprender a escrever melhor e guardar coisas que eu normalmente esqueceria depois de uma semana.",
-    date: "05 out 2026",
-    category: "Pessoal",
-    href: "/blog/por-que-criei-meu-blog",
-  },
-  {
-    title: "O que eu gostei tanto em Mistborn",
-    description:
-      "Algumas coisas que me fizeram gostar tanto da história de Vin, Kelsier e do mundo criado por Brandon Sanderson.",
-    date: "28 set 2026",
-    category: "Livros",
-    href: "/blog/o-que-eu-gostei-em-mistborn",
-  },
-  {
-    title: "Por que ainda gosto de criar coisas pequenas",
-    description:
-      "Nem todo projeto precisa virar um produto. Às vezes programar algo só porque parece divertido já é motivo suficiente.",
-    date: "21 set 2026",
-    category: "Programação",
-    href: "/blog/projetos-pequenos",
-  },
-]
+export default async function Home() {
+  const posts = (await getAllPosts()).slice(0, 3);
 
-export default function Home() {
   return (
     <main>
       <SiteContainer>
@@ -74,7 +51,14 @@ export default function Home() {
 
           <div>
             {posts.map((post) => (
-              <PostItem key={post.href} {...post} />
+              <PostItem 
+                key={post.slug}
+                title={post.title}
+                description={post.description}
+                date={formatPostDate(post.date)}
+                category={post.category}
+                href={`/blog/${post.slug}`}
+              />
             ))}
           </div>
 
