@@ -130,6 +130,7 @@
     scroll-behavior: smooth;
   }
   ::selection {
-    @apply bg-foreground text-background
+    /* @apply bg-foreground text-background */
+    @apply bg-primary text-primary-foreground
   }
 }

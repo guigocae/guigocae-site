@@ -74,7 +74,7 @@ export default async function PostPage({
             </p>
           </header>
 
-          <div className="prose prose-neutral max-w-none dark:prose-invert prose-headings:font-heading prose-headings:font-medium prose-headings:tracking-tight prose-p:leading-8 prose-a:text-foreground prose-a:underline prose-a:underline-offset-4">
+          <div className="prose prose-neutral max-w-none dark:prose-invert prose-headings:font-heading prose-headings:font-medium prose-headings:tracking-tight prose-p:leading-8 prose-a:text-primary prose-a:decoration-primary/50 prose-a:underline prose-a:underline-offset-4 hover:prose-a:decoration-primary prose-blockquote:border-primary prose-blockquote:text-muted-foreground">
             <Content />
           </div>
         </article>

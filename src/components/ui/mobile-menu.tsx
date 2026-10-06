@@ -37,7 +37,10 @@ export function MobileMenu() {
 
       <SheetContent side="right" className="w-[85%] max-w-sm p-0">
         <SheetHeader className="border-b px-6 py-5">
-          <SheetTitle className="font-heading text-xl">guigocae.</SheetTitle>
+          <SheetTitle className="font-heading text-xl">
+            guigocae
+            <span className="text-primary">.</span>
+          </SheetTitle>
         </SheetHeader>
 
         <nav className="flex flex-col px-6 py-6">

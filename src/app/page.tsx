@@ -13,6 +13,8 @@ export default async function Home() {
     <main>
       <SiteContainer>
         <section className="py-20 sm:py-28 md:py-32">
+          <div className="mb-6 h-1 w-10 rounded-full bg-primary" />
+
           <p className="mb-6 text-sm font-medium text-muted-foreground">
             Desenvolvedor & filomático.
           </p>

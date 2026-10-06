@@ -21,6 +21,7 @@ export function ThemeToggle() {
           <Button
             variant="ghost"
             size="icon"
+            className="text-muted-foreground hover:text-primary aria-expanded:text-primary aria-expanded:bg-transparent hover:bg-transparent cursor-pointer"
             aria-label="Alterar tema"
           />
         }
@@ -28,7 +29,7 @@ export function ThemeToggle() {
         <SunMoon className="size-4" />
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="font-sans text-sm">
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <Sun />
           Claro

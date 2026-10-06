@@ -30,7 +30,7 @@ export function PostItem({
           </span>
         </div>
 
-        <h2 className="max-w-3xl font-heading text-3xl leading-tight font-medium tracking-tight transition-colors group-hover:text-muted-foreground sm:text-4xl">
+        <h2 className="max-w-3xl font-heading text-3xl leading-tight font-medium tracking-tight transition-colors group-hover:text-primary sm:text-4xl">
           {title}
         </h2>
 

@@ -23,7 +23,8 @@ export function Header() {
           href="/"
           className="font-heading text-xl font-semibold tracking-tight"
         >
-          guigocae.
+          guigocae
+          <span className="text-primary">.</span>
         </Link>
 
         <div className="flex items-center gap-2">
@@ -35,12 +36,14 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm text-muted-foreground transition-colors hover:text-primary"
               >
                 {item.label}
               </Link>
             ))}
           </nav>
+
+          <div />
 
           <ThemeToggle />
           
