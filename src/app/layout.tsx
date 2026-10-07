@@ -3,6 +3,7 @@ import { Geist, Newsreader } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
+import { Analytics } from "@vercel/analytics/next";
 
 import { Header } from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
@@ -76,6 +77,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <Footer />
           </div>
         </ThemeProvider>
+        
+        <Analytics />
       </body>
     </html>
   );
