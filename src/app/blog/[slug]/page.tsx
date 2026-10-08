@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 
 import { SiteContainer } from "@/components/layouts/site-container";
 import { formatPostDate, getAllPosts, getPost } from "@/lib/posts";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 type PostPageProps = {
   params: Promise<{
@@ -96,6 +98,14 @@ export default async function PostPage({
             <Content />
           </div>
         </article>
+
+        <Link
+          href="/blog"
+          className="group hidden items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground sm:flex pt-16"
+        >
+          <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1" />
+          Voltar para textos
+        </Link>
       </SiteContainer>
     </main>
   )
