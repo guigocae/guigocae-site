@@ -29,7 +29,7 @@ export function ThemeToggle() {
         <SunMoon className="size-4" />
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align="end" className="font-sans text-sm">
+      <DropdownMenuContent align="end" className="font-dm text-sm">
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <Sun />
           Claro
