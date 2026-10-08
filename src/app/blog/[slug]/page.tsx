@@ -101,7 +101,7 @@ export default async function PostPage({
 
         <Link
           href="/blog"
-          className="group hidden items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground sm:flex pt-16"
+          className="group flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground pt-16"
         >
           <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1" />
           Voltar para textos
